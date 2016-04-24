@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  iVoice
 //
-//  Created by  tracetw on 2016/4/24.
+//  Created by  jianhao on 2016/4/24.
 //  Copyright © 2016年 cocoaSwifty. All rights reserved.
 //
 
@@ -16,6 +16,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if NSUserDefaults.standardUserDefaults().valueForKey("uid") == nil { //First Launch 第一次啟用app
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let firstLaunchVC = storyboard.instantiateViewControllerWithIdentifier("FirstLaunch")
+            window?.rootViewController = firstLaunchVC
+        }
+        
+        
         return true
     }
 

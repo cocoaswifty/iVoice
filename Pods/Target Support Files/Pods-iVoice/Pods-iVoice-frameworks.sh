@@ -86,8 +86,12 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-iVoice/Firebase.framework"
   install_framework "Pods-iVoice/JASON.framework"
+  install_framework "Pods-iVoice/JSQMessagesViewController.framework"
+  install_framework "Pods-iVoice/JSQSystemSoundPlayer.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-iVoice/Firebase.framework"
   install_framework "Pods-iVoice/JASON.framework"
+  install_framework "Pods-iVoice/JSQMessagesViewController.framework"
+  install_framework "Pods-iVoice/JSQSystemSoundPlayer.framework"
 fi
